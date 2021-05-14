@@ -4,9 +4,7 @@ Communications Demonstration
 SUMMARY
 =======
 
-The COMM sample (TTY) is designed to demonstrate using the Win32 
-communications functions while maintaining a common code base with 
-Windows code.
+The Program is designed to demonstrate using the Win32 API communications with using RS-232.
 
 MORE INFORMATION
 ================
