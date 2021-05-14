@@ -1,0 +1,243 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resrc1.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+TTYICON                 ICON                    "TTY.ICO"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+TTYBITMAP               BITMAP                  "TTY.BMP"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+TTYMENU MENU
+BEGIN
+    POPUP "&Action"
+    BEGIN
+        MENUITEM "&Connect\tShift+PgUp",        IDM_CONNECT
+        MENUITEM "&Disconnect\tShift+PgDn",     IDM_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    MENUITEM "&Settings...",                IDM_SETTINGS
+    POPUP "&Transfer"
+    BEGIN
+        MENUITEM "Send Data Block\tShift+F1",   IDM_SENDBLOCK
+    END
+    MENUITEM "A&bout",                      IDM_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+TTYACCEL ACCELERATORS
+BEGIN
+    VK_F1,          IDM_SENDBLOCK,          VIRTKEY, SHIFT, NOINVERT
+    VK_NEXT,        IDM_DISCONNECT,         VIRTKEY, SHIFT, NOINVERT
+    VK_PRIOR,       IDM_CONNECT,            VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+SETTINGSDLGBOX DIALOGEX 25, 20, 201, 160
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
+CAPTION "Settings"
+FONT 8, "Helv", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "&COM Options:",-1,5,5,115,123
+    RTEXT           "&Port:",-1,10,20,40,10
+    COMBOBOX        IDD_PORTCB,55,20,55,35,CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Baud Rate:",-1,10,35,40,10,NOT WS_GROUP
+    COMBOBOX        IDD_BAUDCB,55,35,55,35,CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Data Bits:",-1,10,50,40,10,NOT WS_GROUP
+    COMBOBOX        IDD_DATABITSCB,55,50,55,35,CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "P&arity:",-1,10,65,40,10,NOT WS_GROUP
+    COMBOBOX        IDD_PARITYCB,55,65,55,35,CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Stop Bits:",-1,10,80,40,10,NOT WS_GROUP
+    COMBOBOX        IDD_STOPBITSCB,55,80,55,35,CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "F&low:",-1,10,95,40,10,NOT WS_GROUP
+    CONTROL         "DTR/DSR",IDD_DTRDSR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,55,95,50,10
+    CONTROL         "RTS/CTS",IDD_RTSCTS,"Button",BS_AUTOCHECKBOX,55,105,50,10
+    CONTROL         "XON/XOFF",IDD_XONXOFF,"Button",BS_AUTOCHECKBOX,55,115,50,10
+    GROUPBOX        "Additional options:",-1,125,5,70,55,WS_GROUP
+    CONTROL         "Autowrap",IDD_AUTOWRAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,20,50,10
+    CONTROL         "New Line",IDD_NEWLINE,"Button",BS_AUTOCHECKBOX,135,30,50,10
+    CONTROL         "Local Echo",IDD_LOCALECHO,"Button",BS_AUTOCHECKBOX,135,40,50,10
+    GROUPBOX        "Control &Options",-1,5,128,190,26
+    CONTROL         "Use CN_RECEIVE Notifications",IDD_USECNRECEIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,139,115,10
+    CONTROL         "Display Errors",IDD_DISPLAYERRORS,"Button",BS_AUTOCHECKBOX,130,139,60,10
+    PUSHBUTTON      "&Font",IDD_FONT,140,70,40,14,WS_GROUP
+    DEFPUSHBUTTON   "Ok",IDD_OK,140,90,40,14
+    PUSHBUTTON      "Cancel",IDD_CANCEL,140,110,40,14
+END
+
+ABOUTDLGBOX DIALOGEX 10, 25, 221, 58
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About the SDK TTY Sample"
+FONT 8, "Helv", 0, 0, 0x0
+BEGIN
+    ICON            TTYICON,IDD_ABOUTICON,10,5,21,20
+    LTEXT           "Windows v.%d.%d",IDD_TITLELINE,52,5,127,10,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "TTY Sample v.%02d.%02d.%03d",IDD_VERSION,52,15,120,10,SS_NOPREFIX | NOT WS_GROUP
+    CONTROL         "",-1,"Static",SS_BLACKRECT,54,36,162,1
+    DEFPUSHBUTTON   "OK",IDD_OK,177,5,40,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    SETTINGSDLGBOX, DIALOG
+    BEGIN
+    END
+
+    ABOUTDLGBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_COMPREFIX           "COM"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BAUD110             "110"
+    IDS_BAUD300             "300"
+    IDS_BAUD600             "600"
+    IDS_BAUD1200            "1200"
+    IDS_BAUD2400            "2400"
+    IDS_BAUD4800            "4800"
+    IDS_BAUD9600            "9600"
+    IDS_BAUD14400           "14.4k"
+    IDS_BAUD19200           "19.2k"
+    IDS_BAUD38400           "38.4k"
+    IDS_BAUD56000           "56k"
+    IDS_BAUD128000          "128k"
+    IDS_BAUD256000          "256k"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PARITYNONE          "None"
+    IDS_PARITYEVEN          "Even"
+    IDS_PARITYODD           "Odd"
+    IDS_PARITYMARK          "Mark"
+    IDS_PARITYSPACE         "Space"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ONESTOPBIT          "1"
+    IDS_ONE5STOPBITS        "1.5"
+    IDS_TWOSTOPBITS         "2"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MODE_STANDARD       "Standard mode"
+    IDS_MODE_ENHANCED       "386 Enhanced mode"
+    IDS_MODE_WLO            "WLO Compatibilty mode"
+    IDS_MODE_UNDEF          "Undefined mode"
+END
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
