@@ -4,7 +4,8 @@ Communications Demonstration
 SUMMARY
 =======
 
-The program is designed to demonstrate the use of the Win32 API for communication via the RS-232 port.
+The program is designed to demonstrate the use of the Win32 API for communication via the RS-232 port
+(Adapted and compiled in MS VS2019).
 
 MORE INFORMATION
 ================
